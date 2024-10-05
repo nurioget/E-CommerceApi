@@ -1,5 +1,6 @@
 using E_commerce.Persistence;
 using E_commerce.Application;
+using E_commerce.Mapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ builder.Configuration
 
 builder.Services.AddPersistence(builder.Configuration);
 builder.Services.AddApplication();
+builder.Services.AddCustomMapper();
 
 var app = builder.Build();
 
