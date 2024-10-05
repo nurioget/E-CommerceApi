@@ -1,13 +1,7 @@
-﻿using E_commerce.Aplication.Interfaces.Repositories;
-using E_commerce.Aplication.Interfaces.UnitOfWork;
+﻿using E_commerce.Application.Interfaces.Repositories;
+using E_commerce.Application.Interfaces.UnitOfWorks;
 using E_commerce.Persistence.Context;
 using E_commerce.Persistence.Repositories;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace E_commerce.Persistence.UnitOfWorks
 {

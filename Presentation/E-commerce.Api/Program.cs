@@ -1,4 +1,5 @@
 using E_commerce.Persistence;
+using E_commerce.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,7 @@ builder.Configuration
     .AddJsonFile($"appsettings.{evn.EnvironmentName}.json", optional: true);
 
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddApplication();
 
 var app = builder.Build();
 

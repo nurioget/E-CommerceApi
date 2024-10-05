@@ -17,7 +17,7 @@ namespace E_commerce.Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.5")
+                .HasAnnotation("ProductVersion", "7.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -64,23 +64,23 @@ namespace E_commerce.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 10, 3, 11, 49, 5, 808, DateTimeKind.Local).AddTicks(4804),
+                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 443, DateTimeKind.Local).AddTicks(1096),
                             IsDeleted = false,
-                            Name = "Health & Books"
+                            Name = "Movies"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 10, 3, 11, 49, 5, 808, DateTimeKind.Local).AddTicks(4825),
+                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 443, DateTimeKind.Local).AddTicks(1103),
                             IsDeleted = false,
-                            Name = "Baby & Garden"
+                            Name = "Garden"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 10, 3, 11, 49, 5, 808, DateTimeKind.Local).AddTicks(4837),
+                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 443, DateTimeKind.Local).AddTicks(1472),
                             IsDeleted = true,
-                            Name = "Games & Electronics"
+                            Name = "Computers & Books"
                         });
                 });
 
@@ -116,7 +116,7 @@ namespace E_commerce.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 10, 3, 11, 49, 5, 813, DateTimeKind.Local).AddTicks(31),
+                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7954),
                             IsDeleted = false,
                             Name = "Elektrik",
                             ParentId = 0,
@@ -125,7 +125,7 @@ namespace E_commerce.Persistence.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 10, 3, 11, 49, 5, 813, DateTimeKind.Local).AddTicks(33),
+                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7956),
                             IsDeleted = false,
                             Name = "Moda",
                             ParentId = 0,
@@ -134,7 +134,7 @@ namespace E_commerce.Persistence.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 10, 3, 11, 49, 5, 813, DateTimeKind.Local).AddTicks(34),
+                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7981),
                             IsDeleted = false,
                             Name = "Bilgisayar",
                             ParentId = 1,
@@ -143,7 +143,7 @@ namespace E_commerce.Persistence.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 10, 3, 11, 49, 5, 813, DateTimeKind.Local).AddTicks(36),
+                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7982),
                             IsDeleted = false,
                             Name = "Kadın",
                             ParentId = 2,
@@ -187,8 +187,8 @@ namespace E_commerce.Persistence.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 10, 3, 11, 49, 5, 810, DateTimeKind.Local).AddTicks(7719),
-                            Description = "Gülüyorum gitti dolayı koştum eos.",
+                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 444, DateTimeKind.Local).AddTicks(9626),
+                            Description = "Nostrum ut kalemi et patlıcan.",
                             IsDeleted = false,
                             Title = "Laboriosam."
                         },
@@ -196,19 +196,19 @@ namespace E_commerce.Persistence.Migrations
                         {
                             Id = 2,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 10, 3, 11, 49, 5, 810, DateTimeKind.Local).AddTicks(7755),
-                            Description = "Doloremque mi aliquam öyle aut.",
+                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 444, DateTimeKind.Local).AddTicks(9657),
+                            Description = "Olduğu ki düşünüyor aspernatur sandalye.",
                             IsDeleted = true,
-                            Title = "Numquam."
+                            Title = "Commodi."
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2024, 10, 3, 11, 49, 5, 810, DateTimeKind.Local).AddTicks(7817),
-                            Description = "Labore quia quis doloremque autem.",
+                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 444, DateTimeKind.Local).AddTicks(9704),
+                            Description = "Yazın aut amet değirmeni gitti.",
                             IsDeleted = false,
-                            Title = "Düşünüyor."
+                            Title = "Yazın."
                         });
                 });
 
@@ -254,23 +254,23 @@ namespace E_commerce.Persistence.Migrations
                         {
                             Id = 1,
                             BrandId = 1,
-                            CreatedDate = new DateTime(2024, 10, 3, 11, 49, 5, 812, DateTimeKind.Local).AddTicks(7344),
-                            Description = "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-                            Discount = 0.01675681862651990m,
+                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(6167),
+                            Description = "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+                            Discount = 8.74305002423140m,
                             IsDeleted = false,
-                            Price = 533.67m,
-                            Title = "Sleek Rubber Sausages"
+                            Price = 165.47m,
+                            Title = "Sleek Rubber Salad"
                         },
                         new
                         {
                             Id = 2,
                             BrandId = 3,
-                            CreatedDate = new DateTime(2024, 10, 3, 11, 49, 5, 812, DateTimeKind.Local).AddTicks(7372),
-                            Description = "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-                            Discount = 7.039367007348090m,
+                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(6188),
+                            Description = "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+                            Discount = 5.616076183926510m,
                             IsDeleted = false,
-                            Price = 318.09m,
-                            Title = "Refined Wooden Fish"
+                            Price = 236.12m,
+                            Title = "Licensed Fresh Pizza"
                         });
                 });
 

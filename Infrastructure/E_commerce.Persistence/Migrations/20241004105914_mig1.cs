@@ -122,9 +122,9 @@ namespace E_commerce.Persistence.Migrations
                 columns: new[] { "Id", "CreatedDate", "IsDeleted", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 10, 3, 11, 49, 5, 808, DateTimeKind.Local).AddTicks(4804), false, "Health & Books" },
-                    { 2, new DateTime(2024, 10, 3, 11, 49, 5, 808, DateTimeKind.Local).AddTicks(4825), false, "Baby & Garden" },
-                    { 3, new DateTime(2024, 10, 3, 11, 49, 5, 808, DateTimeKind.Local).AddTicks(4837), true, "Games & Electronics" }
+                    { 1, new DateTime(2024, 10, 4, 13, 59, 14, 443, DateTimeKind.Local).AddTicks(1096), false, "Movies" },
+                    { 2, new DateTime(2024, 10, 4, 13, 59, 14, 443, DateTimeKind.Local).AddTicks(1103), false, "Garden" },
+                    { 3, new DateTime(2024, 10, 4, 13, 59, 14, 443, DateTimeKind.Local).AddTicks(1472), true, "Computers & Books" }
                 });
 
             migrationBuilder.InsertData(
@@ -132,10 +132,10 @@ namespace E_commerce.Persistence.Migrations
                 columns: new[] { "Id", "CreatedDate", "IsDeleted", "Name", "ParentId", "Priorty" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 10, 3, 11, 49, 5, 813, DateTimeKind.Local).AddTicks(31), false, "Elektrik", 0, 1 },
-                    { 2, new DateTime(2024, 10, 3, 11, 49, 5, 813, DateTimeKind.Local).AddTicks(33), false, "Moda", 0, 2 },
-                    { 3, new DateTime(2024, 10, 3, 11, 49, 5, 813, DateTimeKind.Local).AddTicks(34), false, "Bilgisayar", 1, 1 },
-                    { 4, new DateTime(2024, 10, 3, 11, 49, 5, 813, DateTimeKind.Local).AddTicks(36), false, "Kadın", 2, 1 }
+                    { 1, new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7954), false, "Elektrik", 0, 1 },
+                    { 2, new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7956), false, "Moda", 0, 2 },
+                    { 3, new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7981), false, "Bilgisayar", 1, 1 },
+                    { 4, new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7982), false, "Kadın", 2, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -143,9 +143,9 @@ namespace E_commerce.Persistence.Migrations
                 columns: new[] { "Id", "CategoryId", "CreatedDate", "Description", "IsDeleted", "Title" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2024, 10, 3, 11, 49, 5, 810, DateTimeKind.Local).AddTicks(7719), "Gülüyorum gitti dolayı koştum eos.", false, "Laboriosam." },
-                    { 2, 3, new DateTime(2024, 10, 3, 11, 49, 5, 810, DateTimeKind.Local).AddTicks(7755), "Doloremque mi aliquam öyle aut.", true, "Numquam." },
-                    { 3, 4, new DateTime(2024, 10, 3, 11, 49, 5, 810, DateTimeKind.Local).AddTicks(7817), "Labore quia quis doloremque autem.", false, "Düşünüyor." }
+                    { 1, 1, new DateTime(2024, 10, 4, 13, 59, 14, 444, DateTimeKind.Local).AddTicks(9626), "Nostrum ut kalemi et patlıcan.", false, "Laboriosam." },
+                    { 2, 3, new DateTime(2024, 10, 4, 13, 59, 14, 444, DateTimeKind.Local).AddTicks(9657), "Olduğu ki düşünüyor aspernatur sandalye.", true, "Commodi." },
+                    { 3, 4, new DateTime(2024, 10, 4, 13, 59, 14, 444, DateTimeKind.Local).AddTicks(9704), "Yazın aut amet değirmeni gitti.", false, "Yazın." }
                 });
 
             migrationBuilder.InsertData(
@@ -153,8 +153,8 @@ namespace E_commerce.Persistence.Migrations
                 columns: new[] { "Id", "BrandId", "CreatedDate", "Description", "Discount", "IsDeleted", "Price", "Title" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2024, 10, 3, 11, 49, 5, 812, DateTimeKind.Local).AddTicks(7344), "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients", 0.01675681862651990m, false, 533.67m, "Sleek Rubber Sausages" },
-                    { 2, 3, new DateTime(2024, 10, 3, 11, 49, 5, 812, DateTimeKind.Local).AddTicks(7372), "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J", 7.039367007348090m, false, 318.09m, "Refined Wooden Fish" }
+                    { 1, 1, new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(6167), "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles", 8.74305002423140m, false, 165.47m, "Sleek Rubber Salad" },
+                    { 2, 3, new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(6188), "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients", 5.616076183926510m, false, 236.12m, "Licensed Fresh Pizza" }
                 });
 
             migrationBuilder.CreateIndex(

@@ -1,4 +1,4 @@
-﻿using E_commerce.Aplication.Interfaces.Repositories;
+﻿using E_commerce.Application.Interfaces.Repositories;
 using E_commerce.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 using System;

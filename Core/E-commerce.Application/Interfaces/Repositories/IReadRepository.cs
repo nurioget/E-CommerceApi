@@ -1,13 +1,8 @@
-﻿using E_commerce.Domain.Common;
-using Microsoft.EntityFrameworkCore.Query;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.EntityFrameworkCore.Query;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+using E_commerce.Domain.Common;
 
-namespace E_commerce.Aplication.Interfaces.Repositories
+namespace E_commerce.Application.Interfaces.Repositories
 {
     public interface IReadRepository<T> where T : class, IEntityBase, new()
     {
