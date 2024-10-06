@@ -1,5 +1,6 @@
 using E_commerce.Persistence;
 using E_commerce.Application;
+using E_commerce.Application.Exceptions;
 using E_commerce.Mapper;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,6 +31,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.ConfigureExceptionHandlingMiddleware();
 
 app.UseAuthorization();
 
