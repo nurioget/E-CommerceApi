@@ -94,24 +94,24 @@ namespace E_commerce.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CategoryProduct",
+                name: "ProductCategory",
                 columns: table => new
                 {
-                    CategoriesId = table.Column<int>(type: "int", nullable: false),
-                    ProductsId = table.Column<int>(type: "int", nullable: false)
+                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    CategoryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CategoryProduct", x => new { x.CategoriesId, x.ProductsId });
+                    table.PrimaryKey("PK_ProductCategory", x => new { x.ProductId, x.CategoryId });
                     table.ForeignKey(
-                        name: "FK_CategoryProduct_Categorys_CategoriesId",
-                        column: x => x.CategoriesId,
+                        name: "FK_ProductCategory_Categorys_CategoryId",
+                        column: x => x.CategoryId,
                         principalTable: "Categorys",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_CategoryProduct_Products_ProductsId",
-                        column: x => x.ProductsId,
+                        name: "FK_ProductCategory_Products_ProductId",
+                        column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -122,9 +122,9 @@ namespace E_commerce.Persistence.Migrations
                 columns: new[] { "Id", "CreatedDate", "IsDeleted", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 10, 4, 13, 59, 14, 443, DateTimeKind.Local).AddTicks(1096), false, "Movies" },
-                    { 2, new DateTime(2024, 10, 4, 13, 59, 14, 443, DateTimeKind.Local).AddTicks(1103), false, "Garden" },
-                    { 3, new DateTime(2024, 10, 4, 13, 59, 14, 443, DateTimeKind.Local).AddTicks(1472), true, "Computers & Books" }
+                    { 1, new DateTime(2024, 10, 6, 10, 30, 24, 828, DateTimeKind.Local).AddTicks(5811), false, "Home" },
+                    { 2, new DateTime(2024, 10, 6, 10, 30, 24, 828, DateTimeKind.Local).AddTicks(5917), false, "Kids & Games" },
+                    { 3, new DateTime(2024, 10, 6, 10, 30, 24, 828, DateTimeKind.Local).AddTicks(5948), true, "Outdoors, Music & Books" }
                 });
 
             migrationBuilder.InsertData(
@@ -132,10 +132,10 @@ namespace E_commerce.Persistence.Migrations
                 columns: new[] { "Id", "CreatedDate", "IsDeleted", "Name", "ParentId", "Priorty" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7954), false, "Elektrik", 0, 1 },
-                    { 2, new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7956), false, "Moda", 0, 2 },
-                    { 3, new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7981), false, "Bilgisayar", 1, 1 },
-                    { 4, new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7982), false, "Kadın", 2, 1 }
+                    { 1, new DateTime(2024, 10, 6, 10, 30, 24, 834, DateTimeKind.Local).AddTicks(7309), false, "Elektrik", 0, 1 },
+                    { 2, new DateTime(2024, 10, 6, 10, 30, 24, 834, DateTimeKind.Local).AddTicks(7311), false, "Moda", 0, 2 },
+                    { 3, new DateTime(2024, 10, 6, 10, 30, 24, 834, DateTimeKind.Local).AddTicks(7312), false, "Bilgisayar", 1, 1 },
+                    { 4, new DateTime(2024, 10, 6, 10, 30, 24, 834, DateTimeKind.Local).AddTicks(7314), false, "Kadın", 2, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -143,9 +143,9 @@ namespace E_commerce.Persistence.Migrations
                 columns: new[] { "Id", "CategoryId", "CreatedDate", "Description", "IsDeleted", "Title" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2024, 10, 4, 13, 59, 14, 444, DateTimeKind.Local).AddTicks(9626), "Nostrum ut kalemi et patlıcan.", false, "Laboriosam." },
-                    { 2, 3, new DateTime(2024, 10, 4, 13, 59, 14, 444, DateTimeKind.Local).AddTicks(9657), "Olduğu ki düşünüyor aspernatur sandalye.", true, "Commodi." },
-                    { 3, 4, new DateTime(2024, 10, 4, 13, 59, 14, 444, DateTimeKind.Local).AddTicks(9704), "Yazın aut amet değirmeni gitti.", false, "Yazın." }
+                    { 1, 1, new DateTime(2024, 10, 6, 10, 30, 24, 831, DateTimeKind.Local).AddTicks(2701), "Alias bundan dergi quia makinesi.", false, "Consequatur." },
+                    { 2, 3, new DateTime(2024, 10, 6, 10, 30, 24, 831, DateTimeKind.Local).AddTicks(2795), "Kutusu mi odit ipsa olduğu.", true, "Eos." },
+                    { 3, 4, new DateTime(2024, 10, 6, 10, 30, 24, 831, DateTimeKind.Local).AddTicks(2822), "Ama ut iure balıkhaneye gülüyorum.", false, "Oldular." }
                 });
 
             migrationBuilder.InsertData(
@@ -153,18 +153,18 @@ namespace E_commerce.Persistence.Migrations
                 columns: new[] { "Id", "BrandId", "CreatedDate", "Description", "Discount", "IsDeleted", "Price", "Title" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(6167), "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles", 8.74305002423140m, false, 165.47m, "Sleek Rubber Salad" },
-                    { 2, 3, new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(6188), "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients", 5.616076183926510m, false, 236.12m, "Licensed Fresh Pizza" }
+                    { 1, 1, new DateTime(2024, 10, 6, 10, 30, 24, 834, DateTimeKind.Local).AddTicks(4102), "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support", 2.489096455453520m, false, 550.59m, "Refined Granite Bike" },
+                    { 2, 3, new DateTime(2024, 10, 6, 10, 30, 24, 834, DateTimeKind.Local).AddTicks(4132), "The Football Is Good For Training And Recreational Purposes", 8.539590597856160m, false, 495.17m, "Generic Metal Cheese" }
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CategoryProduct_ProductsId",
-                table: "CategoryProduct",
-                column: "ProductsId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Details_CategoryId",
                 table: "Details",
+                column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductCategory_CategoryId",
+                table: "ProductCategory",
                 column: "CategoryId");
 
             migrationBuilder.CreateIndex(
@@ -177,16 +177,16 @@ namespace E_commerce.Persistence.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CategoryProduct");
-
-            migrationBuilder.DropTable(
                 name: "Details");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "ProductCategory");
 
             migrationBuilder.DropTable(
                 name: "Categorys");
+
+            migrationBuilder.DropTable(
+                name: "Products");
 
             migrationBuilder.DropTable(
                 name: "Brands");

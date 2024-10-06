@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_commerce.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241004105914_mig1")]
+    [Migration("20241006073024_mig1")]
     partial class mig1
     {
         /// <inheritdoc />
@@ -24,21 +24,6 @@ namespace E_commerce.Persistence.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("CategoryProduct", b =>
-                {
-                    b.Property<int>("CategoriesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CategoriesId", "ProductsId");
-
-                    b.HasIndex("ProductsId");
-
-                    b.ToTable("CategoryProduct");
-                });
 
             modelBuilder.Entity("E_commerce.Domain.Entities.Brand", b =>
                 {
@@ -67,23 +52,23 @@ namespace E_commerce.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 443, DateTimeKind.Local).AddTicks(1096),
+                            CreatedDate = new DateTime(2024, 10, 6, 10, 30, 24, 828, DateTimeKind.Local).AddTicks(5811),
                             IsDeleted = false,
-                            Name = "Movies"
+                            Name = "Home"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 443, DateTimeKind.Local).AddTicks(1103),
+                            CreatedDate = new DateTime(2024, 10, 6, 10, 30, 24, 828, DateTimeKind.Local).AddTicks(5917),
                             IsDeleted = false,
-                            Name = "Garden"
+                            Name = "Kids & Games"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 443, DateTimeKind.Local).AddTicks(1472),
+                            CreatedDate = new DateTime(2024, 10, 6, 10, 30, 24, 828, DateTimeKind.Local).AddTicks(5948),
                             IsDeleted = true,
-                            Name = "Computers & Books"
+                            Name = "Outdoors, Music & Books"
                         });
                 });
 
@@ -119,7 +104,7 @@ namespace E_commerce.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7954),
+                            CreatedDate = new DateTime(2024, 10, 6, 10, 30, 24, 834, DateTimeKind.Local).AddTicks(7309),
                             IsDeleted = false,
                             Name = "Elektrik",
                             ParentId = 0,
@@ -128,7 +113,7 @@ namespace E_commerce.Persistence.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7956),
+                            CreatedDate = new DateTime(2024, 10, 6, 10, 30, 24, 834, DateTimeKind.Local).AddTicks(7311),
                             IsDeleted = false,
                             Name = "Moda",
                             ParentId = 0,
@@ -137,7 +122,7 @@ namespace E_commerce.Persistence.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7981),
+                            CreatedDate = new DateTime(2024, 10, 6, 10, 30, 24, 834, DateTimeKind.Local).AddTicks(7312),
                             IsDeleted = false,
                             Name = "Bilgisayar",
                             ParentId = 1,
@@ -146,7 +131,7 @@ namespace E_commerce.Persistence.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(7982),
+                            CreatedDate = new DateTime(2024, 10, 6, 10, 30, 24, 834, DateTimeKind.Local).AddTicks(7314),
                             IsDeleted = false,
                             Name = "Kadın",
                             ParentId = 2,
@@ -190,28 +175,28 @@ namespace E_commerce.Persistence.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 444, DateTimeKind.Local).AddTicks(9626),
-                            Description = "Nostrum ut kalemi et patlıcan.",
+                            CreatedDate = new DateTime(2024, 10, 6, 10, 30, 24, 831, DateTimeKind.Local).AddTicks(2701),
+                            Description = "Alias bundan dergi quia makinesi.",
                             IsDeleted = false,
-                            Title = "Laboriosam."
+                            Title = "Consequatur."
                         },
                         new
                         {
                             Id = 2,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 444, DateTimeKind.Local).AddTicks(9657),
-                            Description = "Olduğu ki düşünüyor aspernatur sandalye.",
+                            CreatedDate = new DateTime(2024, 10, 6, 10, 30, 24, 831, DateTimeKind.Local).AddTicks(2795),
+                            Description = "Kutusu mi odit ipsa olduğu.",
                             IsDeleted = true,
-                            Title = "Commodi."
+                            Title = "Eos."
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 444, DateTimeKind.Local).AddTicks(9704),
-                            Description = "Yazın aut amet değirmeni gitti.",
+                            CreatedDate = new DateTime(2024, 10, 6, 10, 30, 24, 831, DateTimeKind.Local).AddTicks(2822),
+                            Description = "Ama ut iure balıkhaneye gülüyorum.",
                             IsDeleted = false,
-                            Title = "Yazın."
+                            Title = "Oldular."
                         });
                 });
 
@@ -257,39 +242,39 @@ namespace E_commerce.Persistence.Migrations
                         {
                             Id = 1,
                             BrandId = 1,
-                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(6167),
-                            Description = "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-                            Discount = 8.74305002423140m,
+                            CreatedDate = new DateTime(2024, 10, 6, 10, 30, 24, 834, DateTimeKind.Local).AddTicks(4102),
+                            Description = "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+                            Discount = 2.489096455453520m,
                             IsDeleted = false,
-                            Price = 165.47m,
-                            Title = "Sleek Rubber Salad"
+                            Price = 550.59m,
+                            Title = "Refined Granite Bike"
                         },
                         new
                         {
                             Id = 2,
                             BrandId = 3,
-                            CreatedDate = new DateTime(2024, 10, 4, 13, 59, 14, 446, DateTimeKind.Local).AddTicks(6188),
-                            Description = "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-                            Discount = 5.616076183926510m,
+                            CreatedDate = new DateTime(2024, 10, 6, 10, 30, 24, 834, DateTimeKind.Local).AddTicks(4132),
+                            Description = "The Football Is Good For Training And Recreational Purposes",
+                            Discount = 8.539590597856160m,
                             IsDeleted = false,
-                            Price = 236.12m,
-                            Title = "Licensed Fresh Pizza"
+                            Price = 495.17m,
+                            Title = "Generic Metal Cheese"
                         });
                 });
 
-            modelBuilder.Entity("CategoryProduct", b =>
+            modelBuilder.Entity("E_commerce.Domain.Entities.ProductCategory", b =>
                 {
-                    b.HasOne("E_commerce.Domain.Entities.Category", null)
-                        .WithMany()
-                        .HasForeignKey("CategoriesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
 
-                    b.HasOne("E_commerce.Domain.Entities.Product", null)
-                        .WithMany()
-                        .HasForeignKey("ProductsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductId", "CategoryId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("ProductCategory");
                 });
 
             modelBuilder.Entity("E_commerce.Domain.Entities.Detail", b =>
@@ -314,9 +299,35 @@ namespace E_commerce.Persistence.Migrations
                     b.Navigation("Brand");
                 });
 
+            modelBuilder.Entity("E_commerce.Domain.Entities.ProductCategory", b =>
+                {
+                    b.HasOne("E_commerce.Domain.Entities.Category", "Category")
+                        .WithMany("ProductCategory")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("E_commerce.Domain.Entities.Product", "Product")
+                        .WithMany("ProductCategory")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("E_commerce.Domain.Entities.Category", b =>
                 {
                     b.Navigation("Details");
+
+                    b.Navigation("ProductCategory");
+                });
+
+            modelBuilder.Entity("E_commerce.Domain.Entities.Product", b =>
+                {
+                    b.Navigation("ProductCategory");
                 });
 #pragma warning restore 612, 618
         }
