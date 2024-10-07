@@ -1,5 +1,7 @@
 ﻿using E_commerce.Application.Exceptions;
+using E_commerce.Bases;
 using E_commerce.Beheviors;
+using E_commerce.Features.Products.Rules;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,6 +23,8 @@ namespace E_commerce.Application
 
             services.AddTransient<ExceptionMiddleware>();
 
+            services.AddRulesFromAssemblyContainer(assembly,typeof(BaseRules));
+
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
 
             services.AddValidatorsFromAssembly(assembly);
@@ -29,5 +33,15 @@ namespace E_commerce.Application
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(FluentValidationBehevior<,>));
 
         }
+
+        private static IServiceCollection AddRulesFromAssemblyContainer(this IServiceCollection services, Assembly assembly, Type type)
+        {
+            var types = assembly.GetTypes().Where(t => t.IsSubclassOf(type) && type != t).ToList();
+            foreach (var item in types)
+                services.AddTransient(item);
+
+            return services;
+        }
+        
     }
 }
