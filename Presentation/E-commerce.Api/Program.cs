@@ -2,6 +2,7 @@ using E_commerce.Persistence;
 using E_commerce.Application;
 using E_commerce.Application.Exceptions;
 using E_commerce.Mapper;
+using E_commerce.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,7 @@ builder.Configuration
     .AddJsonFile($"appsettings.{evn.EnvironmentName}.json", optional: true);
 
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
 builder.Services.AddCustomMapper();
 
