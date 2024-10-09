@@ -1,7 +1,9 @@
 ﻿using E_commerce.Application.Interfaces.AutoMapper;
 using E_commerce.Application.Interfaces.UnitOfWorks;
+using E_commerce.Bases;
 using E_commerce.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +12,10 @@ using System.Threading.Tasks;
 
 namespace E_commerce.Application.Features.Products.Command.UpdateProduct
 {
-    public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommandRequest,Unit>
+    public class UpdateProductCommandHandler : BaseHandler,IRequestHandler<UpdateProductCommandRequest,Unit>
     {
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
-
-        public UpdateProductCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
+        public UpdateProductCommandHandler(IMapper mapper, IUnitOfWork unitOfWork, IHttpContextAccessor httpContextAccessor) : base(mapper, unitOfWork, httpContextAccessor)
         {
-            _unitOfWork = unitOfWork;
-            _mapper = mapper;
         }
 
         public async Task<Unit> Handle(UpdateProductCommandRequest request, CancellationToken cancellationToken)
