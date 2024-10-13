@@ -5,6 +5,7 @@ using E_commerce.Application.Features.Products.Queries.GetAllProducts;
 using E_commerce.Application.Features.Products.Command.CreateProduct;
 using E_commerce.Application.Features.Products.Command.DeleteProduct;
 using E_commerce.Application.Features.Products.Command.UpdateProduct;
+using Microsoft.AspNetCore.Authorization;
 
 namespace E_commerce.Api.Controllers
 {
@@ -20,6 +21,7 @@ namespace E_commerce.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetAllProducts()
         {
             var response = await _mediator.Send(new GetAllProductsQueryRequest());
