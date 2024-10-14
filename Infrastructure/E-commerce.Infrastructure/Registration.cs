@@ -1,14 +1,14 @@
-﻿using E_commerce.Infrastructure.Tokens;
-using E_commerce.Interfaces.Tokens;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using E_commerce.Infrastructure.RedisCache;
+using E_commerce.Infrastructure.Tokens;
+using E_commerce.Interfaces.Tokens;
+using E_commerce.Interfaces.RedisCache;
+
+
 
 namespace E_commerce.Infrastructure
 {
@@ -18,6 +18,10 @@ namespace E_commerce.Infrastructure
         {
             services.Configure<TokenSettings>(configuration.GetSection("JWT"));
             services.AddTransient<ITokenService, TokenService>();
+
+            services.Configure<RedisCacheSettings>(configuration.GetSection("RedisCacheSettings"));
+            services.AddTransient<IRedisCacheService, RedisCacheService>();
+
 
             services.AddAuthentication(opt =>
             {
@@ -38,6 +42,13 @@ namespace E_commerce.Infrastructure
                     ClockSkew = TimeSpan.Zero
                 };
             });
+
+            services.AddStackExchangeRedisCache(opt =>
+            {
+                opt.Configuration = configuration["RedisCacheSettings:ConnectionString"];
+                opt.InstanceName = configuration["RedisCacheSettings:InstanceName"];
+            });
+
         }
     }
 }

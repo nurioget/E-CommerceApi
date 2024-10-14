@@ -50,6 +50,5 @@ namespace E_commerce.Api.Controllers
             await _mediator.Send(request);
             return Ok();
         }
-
     }
 }

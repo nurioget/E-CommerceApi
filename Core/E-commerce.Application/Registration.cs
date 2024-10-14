@@ -32,6 +32,8 @@ namespace E_commerce.Application
 
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(FluentValidationBehevior<,>));
 
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RedisCacheBehevior<,>));
+
         }
 
         private static IServiceCollection AddRulesFromAssemblyContainer(this IServiceCollection services, Assembly assembly, Type type)
